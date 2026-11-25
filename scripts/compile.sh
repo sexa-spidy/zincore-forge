@@ -36,7 +36,7 @@ LLVM_TOOLS="LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-ob
 make O="$OUT_DIR" ARCH="$KERNEL_ARCH" $LLVM_TOOLS $DEFCONFIG
 
 # Full kernel name control from builder
-./scripts/config --file "${OUT_DIR}/.config" --set-str CONFIG_LOCALVERSION "-${KERNEL_NAME}-${VARIANT}-zincore"
+./scripts/config --file "${OUT_DIR}/.config" --set-str CONFIG_LOCALVERSION "-${KERNEL_NAME}-${VARIANT}"
 
 # Generic insurance: disable git-dirty auto-suffix
 export LOCALVERSION=
